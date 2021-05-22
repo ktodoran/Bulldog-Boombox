@@ -7,6 +7,7 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&family=Fjalla+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/style.css"/>
     <title>Bulldog Boombox</title>
 
@@ -19,21 +20,40 @@
             <input type="text" id="userentry" 
             placeholder="Search Your Song or Artist" 
             aria-label="Your Favorite"></input>
-            <button type="button">Let's Jam!</button>
+            <button class="searchbutton" type="button">Let's Jam!</button>
         </div>
         </h1>
   </header>
   <section>
-
+    <div>
+      <table class="songlist">
+        <thead>
+          <tr>
+              <th class="artist">Artist</th>
+              <th class="title">Song Title</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="artist"></td>
+            <td class="title"></td>
+          </tr>
+          <tr>
+            <td class="artist"></td>
+            <td class="title"></td>
+          </tr>
+          <tr>
+            <td class="artist"></td>
+            <td class="title"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </section>
-
-
-
   <footer>
     <div>
-      <i class="fab fa-spotify">Powered By: Spotify</i>
+      <i id="spotifylogo" class="fab fa-spotify">Powered By: Spotify</i>
     </div>
-    <div></div>
   </footer>
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <script type="text/javascript" src="./assets/script.js"></script>
