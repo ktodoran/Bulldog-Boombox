@@ -5,16 +5,14 @@ body {
 
 h1 {
     font-size: 36px;
-    font-color: rgb(19,41,75);
+    color: rgb(19,41,75);
     align-content: center;
     padding: 5px;
 
 }
 
 .button {
-    button-color: rgb(19,41,75);
-    font-color: rgb(209,224,215);
-
+    color: rgb(19,41,75);
 }
 
 footer{ 
@@ -23,7 +21,9 @@ footer{
 
 }
 
-.fab fa-spotify{
-    font-color: white; 
+.fabfa-spotify{
+    
     font-size: 24px;
 }
+
+font-color: white; 
