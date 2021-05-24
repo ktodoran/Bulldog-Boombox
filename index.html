@@ -14,19 +14,19 @@
 </head>
 <body>
   <header class="jumbotron">
-        <h1 class="title">
-            <a>Bulldog Boombox</a>
-        <div>
-            <input type="text" id="userentry" 
-            placeholder="Search Your Song or Artist" 
-            aria-label="Your Favorite"></input>
-            <button class="searchbutton" type="button">Let's Jam!</button>
-        </div>
-        </h1>
+    <h1 class="title">
+      <a>Bulldog Boombox</a>
+  <div>
+    <input type="text" id="userentry" 
+      placeholder="Search Your Song or Artist" 
+      aria-label="Your Favorite"></input>
+    <button class="searchbutton" type="button">Let's Jam!</button>
+  </div>
+    </h1>
   </header>
   <section>
     <div>
-      <table class="songlist">
+      <table id= "list" class="songlist">
         <thead>
           <tr>
               <th class="artist">Artist</th>
@@ -52,7 +52,7 @@
   </section>
   <footer>
     <div>
-      <i id="spotifylogo" class="fab fa-spotify">Powered By: Spotify</i>
+      <i id="spotifylogo">Powered By: Spotify<span id="span" class="fab fa-spotify"></span></i>
     </div>
   </footer>
   <script type="text/javascript" src="js/materialize.min.js"></script>
