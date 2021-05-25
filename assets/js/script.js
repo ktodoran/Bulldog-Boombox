@@ -19,6 +19,4 @@ var musicSearch = function () {
                 document.querySelector('#title').innerHTML = response.similartracks.track[i].name;
             }
         });
-    
-        
     }
