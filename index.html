@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css"  media="screen,projection"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&family=Fjalla+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/style.css"/>
+    <link rel="stylesheet" href="./assets/css/style.css"/>
     <title>Bulldog Boombox</title>
 
 </head>
@@ -17,15 +17,18 @@
     <h1 class="title">
       <a>Bulldog Boombox</a>
   <div>
-    <input type="text" id="userentry" 
-      placeholder="Search Your Song or Artist" 
+    <input type="text" id="artistEntry" 
+      placeholder="Artist" 
       aria-label="Your Favorite"></input>
-    <button class="searchbutton" type="button">Let's Jam!</button>
+    <input type="text" id="trackEntry" 
+      placeholder="Song Title" 
+      aria-label="Your Favorite"></input>
+    <button class="searchbutton" type="button" onclick="musicSearch()">Let's Jam!</button>
   </div>
     </h1>
   </header>
   <section>
-    <div>
+    <div class="playlistFull">
       <table id= "list" class="songlist">
         <thead>
           <tr>
@@ -39,12 +42,12 @@
             <td id="title" class="title"></td>
           </tr>
           <tr>
-            <td class="artist"></td>
-            <td class="title"></td>
+            <td id="artist" class="artist"></td>
+            <td id="title" class="title"></td>
           </tr>
           <tr>
-            <td class="artist"></td>
-            <td class="title"></td>
+            <td id="artist" class="artist"></td>
+            <td id="title" class="title"></td>
           </tr>
         </tbody>
       </table>
@@ -55,7 +58,7 @@
       <i id="spotifylogo">Powered By: Spotify<span id="span" class="fab fa-spotify"></span></i>
     </div>
   </footer>
-  <script type="text/javascript" src="js/materialize.min.js"></script>
-  <script type="text/javascript" src="./assets/script.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
+  <script type="text/javascript" src="./assets/js/script.js"></script>
 </body>
 </html>

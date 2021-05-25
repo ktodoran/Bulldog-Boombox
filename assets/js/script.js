@@ -1,9 +1,10 @@
 // variable declarations start here
 var musicSearch = function () {
     //variable declarations end here
-        var searchTermEl = document.querySelector("#userEntry").value.trim();
+    var searchArtistEl = document.querySelector("#artistEntry").value.trim();
+    var searchTrackEl = document.querySelector("#trackEntry").value.trim();
         fetch (
-            'https://api.giphy.com/v1/gifs/search?api_key=HvaacROi9w5oQCDYHSIk42eiDSIXH3FN&q=' + searchTermEl + '&limit=30'
+            'http://ws.audioscrobbler.com/2.0/?method=track.getsimilar&artist=' + searchArtistEl + '&track=' + searchTrackEl + '&api_key=81f35ca97ccc4666d2af29e3c5709eba&format=json'
         )
     
         .then(function(response) {
@@ -12,17 +13,10 @@ var musicSearch = function () {
         .then(function(response) {
             console.log(response.data[0]);
     
-            for (i = 0; i < response.data.length; i++) {
+            for (i = 0; i < response.similartracks.track.length; i++) {
     
-                var cellEl = document.querySelector("#artist");
-    
-                cellEl.innerHTML = "";
-    
-                var gifImg = document.createElement('img');
-                gifImg.setAttribute('src', response.data[i].images.fixed_height.url);
-                cellEl.append(gifImg);
-    
-                document.querySelector('#title').innerHTML = response.data[i].title;
+                document.querySelector('#artist').innerHTML = response.similartracks.track[i].artist.name;
+                document.querySelector('#title').innerHTML = response.similartracks.track[i].name;
             }
         });
     
