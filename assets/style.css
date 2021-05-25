@@ -1,0 +1,31 @@
+
+body {
+    background-color: rgb(209,224,215);
+
+}
+
+h1 {
+    font-size: 56px;
+    color: rgb(19,41,75);
+    align-content: center;
+    padding: 10px;
+    text-align: center;
+    line-height: 150px;
+
+}
+
+.button {
+    color: rgb(19,41,75);
+    font-size: 24px;
+}
+
+footer{ 
+    background-color: rgb(0,163,224);
+    padding: 5px;
+
+}
+
+.fabfa-spotify{
+    
+    font-size: 24px;
+}
