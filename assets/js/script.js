@@ -5,7 +5,7 @@ var musicSearch = function () {
     var searchTrackEl = document.querySelector("#trackEntry").value.trim();
 
     fetch(
-        'http://ws.audioscrobbler.com/2.0/?method=track.getsimilar&artist=' + searchArtistEl + '&track=' + searchTrackEl + '&api_key=81f35ca97ccc4666d2af29e3c5709eba&format=json&limit=30'
+        'https://ws.audioscrobbler.com/2.0/?method=track.getsimilar&artist=' + searchArtistEl + '&track=' + searchTrackEl + '&api_key=81f35ca97ccc4666d2af29e3c5709eba&format=json&limit=30'
     )
 
         .then(function (response) {
