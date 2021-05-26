@@ -4,24 +4,35 @@ body {
 }
 
 h1 {
-    font-size: 56px;
-    color: rgb(19,41,75);
+    font-size: 60px;
     align-content: center;
     padding: 10px;
     text-align: center;
-    line-height: 125px;
+    line-height: 80px;
 
 }
 
-.button {
+::placeholder {
     color: rgb(19,41,75);
-    font-size: 24px;
+    font-size: 20px;
+
+}
+
+#trackEntry {
+    color: rgb(19,41,75) !important;
 
 }
  
 table {
     font-size: 26px;
     text-align: center;
+}
+
+.searchbutton {
+    background-color: rgb(0,163,224);
+    color: rgb(19,41,75);
+    font-size: 38px;
+
 }
 
 footer {
@@ -32,3 +43,9 @@ footer {
     font-size: 24px;
     
 }
+
+#lastlogo {
+    color: red;
+   
+   }
+
