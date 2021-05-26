@@ -14,12 +14,7 @@ h1 {
 
 ::placeholder {
     color: rgb(19,41,75);
-    font-size: 20px;
-
-}
-
-#trackEntry {
-    color: rgb(19,41,75) !important;
+    font-size: 22px;
 
 }
  
