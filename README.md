@@ -1,6 +1,6 @@
 # Bulldog-Boombox
 
-![ScreenShot of Project](assets/images/BulldogBoombox.jpg)
+![ScreenShot of Project](assets/images/ScreenshotofProject2.jpg)
 
 ## What is Bulldog Boombox?
 Bulldog Boombox is a application for anyone who loves music! If you are sick and tired of YouTube creating a playlist for you that pulls songs from different genres, then we've got the fix for you!
