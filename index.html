@@ -16,49 +16,41 @@
   <header class="jumbotron">
     <h1 class="title">
       <div><a>Bulldog</div>
-        <span><img src="./assets/images/187049405_1137282816779709_1649544450989046195_n.png" height="250" width="300"> </span>
+        <span><img src="./assets/images/187049405_1137282816779709_1649544450989046195_n.png" alt="" height="250" width="300"> </span>
       <div>Boombox</a>
       </div> 
   <div>
-    <input type="text" id="userEntry" 
-      placeholder="Search Your Song or Artist" 
+    <input type="text" id="artistEntry" 
+      placeholder="Artist" 
+      aria-label="Your Favorite"></input>
+    <input type="text" id="trackEntry" 
+      placeholder="Song Title" 
       aria-label="Your Favorite"></input>
     <button class="searchbutton" type="button" onclick="musicSearch()">Let's Jam!</button>
   </div>
     </h1>
   </header>
   <section>
-    <div>
-      <table id= "list" class="songlist">
+    <div class="playlistFull">
+      <table id= "list" class="songlist striped">
         <thead>
           <tr>
-              <th id= "artist" class="artist">Artist</th>
-              <th id= "title" class="title">Song Title</th>
+              <th class="col s4 center align artist">Artist</th>
+              <th class="col s4 center align title">Song Title</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td id="artist" class="artist"></td>
-            <td id="title" class="title"></td>
-          </tr>
-          <tr>
-            <td class="artist"></td>
-            <td class="title"></td>
-          </tr>
-          <tr>
-            <td class="artist"></td>
-            <td class="title"></td>
-          </tr>
+        <tbody id="body">
         </tbody>
       </table>
+      <div class="col s4 center-align">
+      </div>
     </div>
   </section>
   <footer>
-    <div>
-      <p id="sources" class="fab fa-lastfm">Jam's Powered By: Last.FM </p>
-      <p id="sources">Created By: A Couple of Future Coders</p>
-      <p id="sources">Event Locator Powered By:</p>
-      
+    <div class="row">
+      <div id="sources" class="col s4">Jam's Powered By: Last.FM  <i id="lastlogo" class="fab fa-lastfm"></i></div>
+      <div id="sources" class="col s4">Created By: A Couple of Future Coders</div>
+      <div class="col s4">Event Locator Powered By: <img src="./assets/images/Bandsintown.jpg" alt="" class="bandslogo" height="25" width="125"> </div>      
     </div>
   </footer>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
