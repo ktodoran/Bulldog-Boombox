@@ -22,9 +22,6 @@ This data includes:
 Link to website: https://ktodoran.github.io/Bulldog-Boombox/
 Link to Repository: https://github.com/ktodoran/Bulldog-Boombox
 
-This is a landing page for my third created Javascript file, a Daily Task Planner!
-If you need to get organized, and plan your day out with all of the tasks you have planned, then this is for you!
-
-There is a screenshot of the layout provided above! Feel free to take a look at its layout!
+There is a screenshot of the layout provided above! Feel free to take a preview of what we've created!
 
 This file was created by the collaboration of Kyle Todoran, James Crawley, and Verna Heyne!
