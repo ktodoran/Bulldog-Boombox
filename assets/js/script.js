@@ -17,9 +17,15 @@ var musicSearch = function () {
                 var bodyEl = document.getElementById("body");
                 var rowEl = document.createElement("tr");
                 var artistEl = document.createElement("td");
+
                 artistEl.textContent = response.similartracks.track[i].artist.name;
+
                 var titleEl = document.createElement("td");
+
                 titleEl.textContent = response.similartracks.track[i].name;
+                titleEl.classList.add("col", "s4", "center-align");
+                artistEl.classList.add("col", "s4", "center-align");
+
 
                 rowEl.appendChild(artistEl);
                 rowEl.appendChild(titleEl);
