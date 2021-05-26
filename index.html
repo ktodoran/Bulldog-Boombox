@@ -20,35 +20,27 @@
       <div>Boombox</a>
       </div> 
   <div>
-    <input type="text" id="userEntry" 
-      placeholder="Search Your Song or Artist" 
+    <input type="text" id="artistEntry" 
+      placeholder="Artist" 
+      aria-label="Your Favorite"></input>
+    <input type="text" id="trackEntry" 
+      placeholder="Song Title" 
       aria-label="Your Favorite"></input>
     <button class="searchbutton" type="button" onclick="musicSearch()">Let's Jam!</button>
   </div>
     </h1>
   </header>
   <section>
-    <div>
-      <table id= "list" class="songlist">
+    <div class="playlistFull">
+      <table id= "list" class="songlist striped">
         <thead>
           <tr>
-              <th id= "artist" class="artist">Artist</th>
-              <th id= "title" class="title">Song Title</th>
+              <th class="col s4 center align artist">Artist</th>
+              <th class="col s4 center align title">Song Title</th>
+              <th class="col s4 center align event">Upcoming Events</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td id="artist" class="artist"></td>
-            <td id="title" class="title"></td>
-          </tr>
-          <tr>
-            <td class="artist"></td>
-            <td class="title"></td>
-          </tr>
-          <tr>
-            <td class="artist"></td>
-            <td class="title"></td>
-          </tr>
+        <tbody id="body">
         </tbody>
       </table>
     </div>
