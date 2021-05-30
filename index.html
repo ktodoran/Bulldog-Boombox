@@ -20,10 +20,11 @@
         <span><img src="./assets/images/190746261_426581872043184_7340825247362275762_n.png" alt="" height="250" width="300"> </span>
       <div>Boombox</a>
       </div> 
+    </h1>
   <div>
-    <p id="intro" class="">Welcome to Bulldog Boombox! Use this site to find songs and artists similar to your current favorite jam. 
-      You also have the option to see if those artists will be playing in your area by selecting Events in the search options.
-    </p>
+    <h4 id="intro" class="">Welcome to Bulldog Boombox! Use this site to find songs and artists similar to your current favorite jam. 
+      Information on the artist entered will generate above the playlist of related songs.
+    </h4>
      <!-- Modal Trigger -->
     <a class="waves-effect waves-light btn modal-trigger" href="#userEntry">Let's Jam!</a>
 
@@ -31,32 +32,35 @@
     <div id="userEntry" class="modal top-sheet">
       <div class="modal-content">
         <h4>What Are You Groovin' To?</h4>
-        <input type="text" id="artistEntry" 
-          placeholder="Artist" 
-          aria-label="Your Favorite"></input>
-        <input type="text" id="trackEntry" 
-          placeholder="Song Title" 
-          aria-label="Your Favorite"></input>
-        <label>
-          <input type="checkbox"/>
-          <span id="eventsCheck">Interested In Live Events?</span>
-        </label>
+          <div class="input-field">
+            <input type="text" id="artistEntry" 
+              placeholder="Artist" 
+              aria-label="Your Favorite"></input>
+          </div>
+          <div class="input-field">
+            <input type="text" id="trackEntry" 
+              placeholder="Song Title" 
+              aria-label="Your Favorite"></input>
+          </div>
+            <label>
+            <input type="checkbox"/>
+            <span id="eventsCheck">Want To Know More About The Artist?</span>
+          </label>
       </div>
       <div class="modal-footer">
         <a href="#!" onclick="generatePlaylist();" class="modal-close waves-effect waves-green btn-flat">Rock On!</a>
       </div>
     </div>
   </div>
-    </h1>
   </header>
+  <section id="artistResult" class="artistResult col s12 center align"></section>
   <section>
-    <div class="playlistFull" style="display: none;">
-      <table id= "list" class="songlist striped">
+    <div id="list" class="playlistFull" style="display: none;">
+      <table id= "list" class="songlist striped responsive-table">
         <thead>
           <tr>
-              <th class="col s4 center align artist">Artist</th>
-              <th class="col s4 center align title">Song Title</th>
-              <th class="col s4 center align event" style="display: none;">Upcoming Events</th>
+            <th id="artist" class="col s4 center align artist">Artist</th>
+            <th id="title" class="col s4 center align title">Song Title</th>
           </tr>
         </thead>
         <tbody id="body">
