@@ -1,3 +1,5 @@
+var searchArtistEl = document.querySelector("#artistEntry").value.trim();
+var searchTrackEl = document.querySelector("#trackEntry").value.trim();
 
 $(document).ready(function(){
     $('.modal').modal();
@@ -5,9 +7,9 @@ $(document).ready(function(){
 // function to pull data from user search and fetch from last.fm API
 var generatePlaylist = function () {
     
-    document.getElementById("list").style.display = "block";
-    document.getElementById("body").style.display = "block";
+    document.getElementById("list").style.display = "";
     document.getElementById("searchbutton").style.display = "none";
+    document.getElementById("resultsbutton").style.display = "block";
     
     var searchArtistEl = document.querySelector("#artistEntry").value.trim();
     var searchTrackEl = document.querySelector("#trackEntry").value.trim();
@@ -28,12 +30,11 @@ var generatePlaylist = function () {
             var artistEl = document.createElement("td");
 
             artistEl.textContent = response.similartracks.track[i].artist.name;
-
+                
             var titleEl = document.createElement("td");
 
             titleEl.textContent = response.similartracks.track[i].name;
             artistEl.id = "artistInfo";
-
 
             rowEl.appendChild(artistEl);
             rowEl.appendChild(titleEl);
@@ -42,8 +43,15 @@ var generatePlaylist = function () {
         }
 
     })
-    // pull from wikipedia API for the artist searched
-    fetch (`https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=${searchArtistEl}`)
+}
+
+// pull from wikipedia API for the artist searched
+function generateInformation() {
+    document.getElementById("container").style.display = "block";
+    document.getElementById("resultsbutton").style.display = "none";
+    var searchArtistEl = document.querySelector("#artistEntry").value.trim();
+
+fetch (`https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=${searchArtistEl}`)
         .then(response => response.json())
         .then(data => {
             const results = data.query.search;
@@ -51,7 +59,7 @@ var generatePlaylist = function () {
         });
 
     function displayResults(results) {
-        document.getElementById("artistcard").style.display = "block";
+        document.getElementById("container").style.display = "block";
         var searchResults = document.querySelector('.artistResult');
         searchResults.innerHTML = '';
         var result = results[0];
@@ -66,5 +74,4 @@ var generatePlaylist = function () {
             </div>`
         );
     }
-    
 }

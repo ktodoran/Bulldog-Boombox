@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css"/>
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css"  media="screen,projection"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&family=Fjalla+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Bulldog Boombox</title>
     <link rel="shortcut icon" type="image/jpg" href="./assets/images/191245553_209493517686983_1549457910557063746_n.png"/>
 </head>
@@ -26,13 +27,13 @@
       Information on the artist entered will generate above the playlist of related songs.
     </h4>
      <!-- Modal Trigger -->
-  <div class="container">
-   <div class="center">
-    <a id="searchbutton" class="btn modal-trigger" href="#userEntry">Let's Jam!</a>
+  <div id="modaltrigger" class="container">
+   <div class="centerbtn">
+    <a id="searchbutton" class="btn-large modal-trigger" href="#userEntry">Let's Jam!</a>
    </div>
   </div>
     <!-- Modal Structure -->
-    <div id="userEntry" class="modal top-sheet">
+    <div id="userEntry" class="modal">
       <div class="modal-content">
         <h4>What Are You Groovin' To?</h4>
           <div class="input-field">
@@ -45,50 +46,59 @@
               placeholder="Song Title" 
               aria-label="Your Favorite"></input>
           </div>
-            <label>
-            <input type="checkbox"/>
-            <span id="eventsCheck">Want To Know More About The Artist?</span>
-          </label>
       </div>
       <div class="modal-footer">
-        <a href="#!" id="modalbtn" onclick="generatePlaylist();" class="modal-close waves-effect waves-light">Rock On!</a>
+        <a href="#!" id="modalbtn" onclick="generatePlaylist();" class="modal-close btn waves-effect waves-light">Rock On!</a>
       </div>
     </div>
   </div>
   </header>
-<!--<div id="artistcard" style="display:none"class="artistcard">
+  <div id="container" class="card-large container" style="display: none;">
     <div class="col s12 m6">
       <div class="card blue-grey darken-1">
         <div class="card-content white-text">
-          <span class="card-title">Artist Info!</span>
-          <section id="artistResult" class="artistResult col s12 center align"></section>
+          <span id="cardtitle" class="resultItem card-title"></span>
+          <p id="artistResult" class="artistResult"></p>
         </div>
       </div>
     </div>
-  </div>-->
-  <section class="results">
-    <div id="list" class="playlistFull" style="display: none;">
-      <table id="list" class="centered highlight">
-        <thead>
-          <tr>
-            <th id="artist" class="artist">Artist</th>
-            <th id="title" class="align title">Song Title</th>
-          </tr>
-        </thead>
-        <tbody id="body">
-        </tbody>
-      </table>
+  </div>
+<div>
+  <button id="resultsbutton" class="resultsbutton" onclick="generateInformation();" style="display:none">Want To See More Artist Information?</button>
+</div>
+<div class="card-large container">
+ <div class="col s12">
+  <table id="list" class="centered highlight" style="display: none;">
+    <thead>
+      <tr>
+        <th id="artist" class="artist">Artist</th>
+        <th id="title" class="title">Song Title</th>
+      </tr>
+    </thead>
+     <tbody id="body">
+     </tbody>
+     <tfoot>
+      <tr>
+       <td>
+      <tr>
+        <td>
+        </td>
+      </tr>
+       </td>
+      </tr>
+     </tfoot>
+  </table>
+  </div>
+</div>
+<footer>
+  <div class="row">
+    <div id="sources" class="col s4">Jam's Powered By: Last.FM  
+      <i id="lastlogo" class="fab fa-lastfm"></i>
     </div>
-  </section>
-  <footer>
-    <div class="row">
-      <div id="sources" class="col s4">Jam's Powered By: Last.FM  
-        <i id="lastlogo" class="fab fa-lastfm"></i>
-      </div>
-      <div id="sources" class="col s4">Created By: A Few Future Coders</div>
-      <div class="col s4">Artist Information Powered By: Wikipedia</div> 
-    </div>
-  </footer>
+    <div id="sources" class="col s4">Created By: A Few Future Coders</div>
+    <div class="col s4">Artist Information Powered By: Wikipedia</div> 
+  </div>
+</footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
   <script type="text/javascript" src="./assets/js/script.js"></script>
