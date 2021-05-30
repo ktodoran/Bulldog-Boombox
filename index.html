@@ -22,12 +22,15 @@
       </div> 
     </h1>
   <div>
-    <h4 id="intro" class="">Welcome to Bulldog Boombox! Use this site to find songs and artists similar to your current favorite jam. 
+    <h4 id="intro" class="intro">Welcome to Bulldog Boombox! Use this site to find songs and artists similar to your current favorite jam. 
       Information on the artist entered will generate above the playlist of related songs.
     </h4>
      <!-- Modal Trigger -->
-    <a class="waves-effect waves-light btn modal-trigger" href="#userEntry">Let's Jam!</a>
-
+  <div class="container">
+   <div class="center">
+    <a id="searchbutton" class="btn modal-trigger" href="#userEntry">Let's Jam!</a>
+   </div>
+  </div>
     <!-- Modal Structure -->
     <div id="userEntry" class="modal top-sheet">
       <div class="modal-content">
@@ -48,19 +51,28 @@
           </label>
       </div>
       <div class="modal-footer">
-        <a href="#!" onclick="generatePlaylist();" class="modal-close waves-effect waves-green btn-flat">Rock On!</a>
+        <a href="#!" id="modalbtn" onclick="generatePlaylist();" class="modal-close waves-effect waves-light">Rock On!</a>
       </div>
     </div>
   </div>
   </header>
-  <section id="artistResult" class="artistResult col s12 center align"></section>
-  <section>
+<!--<div id="artistcard" style="display:none"class="artistcard">
+    <div class="col s12 m6">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">Artist Info!</span>
+          <section id="artistResult" class="artistResult col s12 center align"></section>
+        </div>
+      </div>
+    </div>
+  </div>-->
+  <section class="results">
     <div id="list" class="playlistFull" style="display: none;">
-      <table id= "list" class="songlist striped responsive-table">
+      <table id="list" class="centered highlight">
         <thead>
           <tr>
-            <th id="artist" class="col s4 center align artist">Artist</th>
-            <th id="title" class="col s4 center align title">Song Title</th>
+            <th id="artist" class="artist">Artist</th>
+            <th id="title" class="align title">Song Title</th>
           </tr>
         </thead>
         <tbody id="body">
@@ -70,9 +82,11 @@
   </section>
   <footer>
     <div class="row">
-      <div id="sources" class="col s4">Jam's Powered By: Last.FM  <i id="lastlogo" class="fab fa-lastfm"></i></div>
+      <div id="sources" class="col s4">Jam's Powered By: Last.FM  
+        <i id="lastlogo" class="fab fa-lastfm"></i>
+      </div>
       <div id="sources" class="col s4">Created By: A Few Future Coders</div>
-      <div class="col s4">Event Locator Powered By: <img src="./assets/images/Bandsintown.jpg" alt="" class="bandslogo" height="25" width="125"> </div> 
+      <div class="col s4">Artist Information Powered By: Wikipedia</div> 
     </div>
   </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

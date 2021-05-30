@@ -7,6 +7,7 @@ var generatePlaylist = function () {
     
     document.getElementById("list").style.display = "block";
     document.getElementById("body").style.display = "block";
+    document.getElementById("searchbutton").style.display = "none";
     
     var searchArtistEl = document.querySelector("#artistEntry").value.trim();
     var searchTrackEl = document.querySelector("#trackEntry").value.trim();
@@ -31,8 +32,6 @@ var generatePlaylist = function () {
             var titleEl = document.createElement("td");
 
             titleEl.textContent = response.similartracks.track[i].name;
-            titleEl.classList.add("col-s4", "center-align");
-            artistEl.classList.add("col-s4", "center-align");
             artistEl.id = "artistInfo";
 
 
@@ -52,6 +51,7 @@ var generatePlaylist = function () {
         });
 
     function displayResults(results) {
+        document.getElementById("artistcard").style.display = "block";
         var searchResults = document.querySelector('.artistResult');
         searchResults.innerHTML = '';
         var result = results[0];
