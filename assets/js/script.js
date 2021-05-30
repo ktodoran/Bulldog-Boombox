@@ -1,5 +1,8 @@
 var searchArtistEl = document.querySelector("#artistEntry").value.trim();
 var searchTrackEl = document.querySelector("#trackEntry").value.trim();
+var currentTrackList;
+
+M.toast({html: 'I am a toast!'})
 
 $(document).ready(function(){
     $('.modal').modal();
@@ -23,11 +26,14 @@ var generatePlaylist = function () {
     })
     .then(function (response) {
         console.log(response);
+        currentTrackList = response;
 
         for (i = 0; i < response.similartracks.track.length; i++) {
             var bodyEl = document.getElementById("body");
             var rowEl = document.createElement("tr");
             var artistEl = document.createElement("td");
+            var favoritesEL = document.createElement("td");
+
 
             artistEl.textContent = response.similartracks.track[i].artist.name;
                 
@@ -38,11 +44,24 @@ var generatePlaylist = function () {
 
             rowEl.appendChild(artistEl);
             rowEl.appendChild(titleEl);
+            rowEl.appendChild(favoritesEL);
+            favoritesEL.insertAdjacentHTML('beforeend',
+            '<button id="favorite" onclick="favorites('+i+');" class="favorite"><span><i class="material-icons">stars</i></span></button>');
 
             bodyEl.appendChild(rowEl);
         }
 
+
+
     })
+}
+
+var favorites = function(i) {
+    // save track details to local storage
+    var savedTracks = [];
+    var currentTrack = currentTrackList.similartracks.track[i];
+    savedTracks.push(currentTrack);
+    localStorage.setItem("playlist", JSON.stringify(currentTrackList.similartracks.track[i]));
 }
 
 // pull from wikipedia API for the artist searched
