@@ -18,6 +18,7 @@ var generatePlaylist = function () {
     document.getElementById("list").style.display = "";
     document.getElementById("searchbutton").style.display = "none";
     document.getElementById("resultsbutton").style.display = "block";
+    document.getElementById("intro").style.display = "none";
     
     var searchArtistEl = document.querySelector("#artistEntry").value.trim();
     var searchTrackEl = document.querySelector("#trackEntry").value.trim();
