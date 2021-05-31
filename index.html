@@ -14,7 +14,7 @@
     <link rel="shortcut icon" type="image/jpg" href="./assets/images/191245553_209493517686983_1549457910557063746_n.png"/>
 </head>
 <body>
-  <a onclick="getToasted();" class="btn">My Last Saved Song</a>
+  <a id="toastedbtn" onclick="getToasted();" class="btn">My Last Saved Song</a>
   <header class="jumbotron">
     <h1 class="title">
       <div><a>Bulldog</div>
@@ -24,7 +24,8 @@
     </h1>
   <div>
     <h4 id="intro" class="intro">Welcome to Bulldog Boombox! Use this site to find songs and artists similar to your current favorite jam. 
-      Information on the artist entered will generate above the playlist of related songs.
+      More information on the artist you search for can be found by clicking on "Want To See More Artist Information?" after the playlist is generated. 
+      Click "Save For Later" to locally save one song to search for later.
     </h4>
      <!-- Modal Trigger -->
   <div id="modaltrigger" class="container">
@@ -73,7 +74,7 @@
       <tr>
         <th id="artist" class="artist">Artist</th>
         <th id="title" class="title">Song Title</th>
-        <th id="saveFave" class="favoriteList">Add to Favorites</th>
+        <th id="saveFave" class="favoriteList">Save For Later</th>
       </tr>
     </thead>
      <tbody id="body">
@@ -92,12 +93,12 @@
   </div>
 </div>
 <footer>
-  <div class="row">
-    <div id="sources" class="col s4">Jam's Powered By: Last.FM  
+  <div class="row footer">
+    <div id="sources" class="col s4">Jam's Powered By: <a href="https://www.last.fm/api" target="_blank" style="color: white;">last.fm</a>  
       <i id="lastlogo" class="fab fa-lastfm"></i>
     </div>
     <div id="sources" class="col s4">Created By: A Few Future Coders</div>
-    <div class="col s4">Artist Information Powered By: Wikipedia</div> 
+    <div class="col s4">Artist Information Powered By: <a href="https://www.mediawiki.org/wiki/API:Main_page" target="_blank" style ="color: white;">Wikipedia <span><i class="fab fa-wikipedia-w"></i></span></a></div> 
   </div>
 </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

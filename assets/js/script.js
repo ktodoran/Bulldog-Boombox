@@ -1,7 +1,14 @@
 var searchArtistEl = document.querySelector("#artistEntry").value.trim();
 var searchTrackEl = document.querySelector("#trackEntry").value.trim();
 var currentTrackList;
-
+//modal to list last saved song
+function getToasted() {
+    var lastSavedArtist = localStorage.getItem("playlist");
+    var savedArtistInfo = JSON.parse(lastSavedArtist);
+    console.log(lastSavedArtist);
+    M.toast({html: 'Artist: ' + savedArtistInfo.artist.name + ' Track: ' + savedArtistInfo.name})
+}
+//modal for entry of artist and song title to generate playlist
 $(document).ready(function(){
     $('.modal').modal();
 });
@@ -68,7 +75,7 @@ function generateInformation() {
     document.getElementById("resultsbutton").style.display = "none";
     var searchArtistEl = document.querySelector("#artistEntry").value.trim();
 
-fetch (`https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=${searchArtistEl}`)
+    fetch (`https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=${searchArtistEl}`)
         .then(response => response.json())
         .then(data => {
             const results = data.query.search;
