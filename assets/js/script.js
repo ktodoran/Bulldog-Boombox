@@ -2,8 +2,6 @@ var searchArtistEl = document.querySelector("#artistEntry").value.trim();
 var searchTrackEl = document.querySelector("#trackEntry").value.trim();
 var currentTrackList;
 
-M.toast({html: 'I am a toast!'})
-
 $(document).ready(function(){
     $('.modal').modal();
 });
