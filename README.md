@@ -1,5 +1,8 @@
 # Bulldog-Boombox
 
+> **Archived coursework (2021).** Group project built with two classmates during Butler University's full-stack boot camp. Kept as a record of where I started; no longer maintained.
+
+
 ![ScreenShot of Project](assets/images/Screenshot5.png)
 
 ## What is Bulldog Boombox?
